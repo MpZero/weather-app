@@ -7,6 +7,108 @@ html {
   box-sizing: inherit;
 }
 
+:root {
+  --text: hsl(0, 0%, 0%);
+  --background: hsl(282, 28%, 93%);
+  --primary: hsl(236, 18%, 68%);
+  --secondary: hsl(231, 52%, 53%);
+  --accent: hsl(251, 82%, 62%);
+}
+
+@media (color-scheme-dark: dark) {
+  :root {
+    --text: hsl(282, 28%, 93%);
+    --background: hsl(270, 25%, 13%);
+    --primary: hsl(236, 18%, 68%);
+    --secondary: hsl(218, 28%, 15%);
+    --accent: hsl(251, 80%, 92%);
+  }
+}
 body {
   background-color: beige;
+  margin: 0;
+}
+
+#app-container,
+#app-container > * {
+  justify-content: center;
+  /* padding: 200px; */
+  height: 1000px;
+  width: 1000px;
+  /* background-color: red; */
+
+  background-color: var(--background);
+}
+
+#top-wrapper {
+  height: 100px;
+  /* width: 600px; */
+  background-color: blue;
+  display: grid;
+  grid-template-columns: 3fr 1fr;
+}
+
+#search {
+  height: auto;
+  /* width: 600px; */
+  background-color: green;
+}
+
+#grades {
+  height: auto;
+  /* width: 600px; */
+
+  background-color: yellow;
+}
+
+/* TOP PART END */
+
+#country {
+  height: 100px;
+  /* width: 600px; */
+  background-color: aqua;
+}
+
+#city {
+  height: 100px;
+  background-color: burlywood;
+}
+
+#weather-image {
+  height: 100px;
+  background-color: darkcyan;
+}
+
+#temperature {
+  height: 100px;
+  background-color: goldenrod;
+}
+
+#bottom-wrapper {
+  height: 100px;
+  background-color: violet;
+  display: grid;
+  grid-template-columns: auto auto auto auto;
+}
+
+#feels-like {
+  height: auto;
+  background-color: cadetblue;
+}
+#humidity {
+  height: auto;
+  background-color: orangered;
+}
+#rain {
+  height: auto;
+  background-color: olive;
+}
+#wind {
+  height: auto;
+  background-color: orange;
+}
+
+#app-container > * {
+  background-color: var(--background);
+  border: 1px solid black;
 }

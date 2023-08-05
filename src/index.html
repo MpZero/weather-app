@@ -8,7 +8,32 @@
     <script src="main.js"></script>
   </head>
   <body>
-    Hello world!
-    <div id="container"></div>
+    <div id="container">
+      <div id="app-container">
+        <div id="top-wrapper">
+          <div id="search-wrapper">
+            <form onsubmit="event.preventDefault()" action="" method="post">
+              <input type="search" name="" id="search" />
+              <button id="submitbtn">submit</button>
+          </div>
+
+          <div id="grades">
+          <button>ºC</button>  
+          <div class="line"></div>
+          <button>ºF</button>
+          </div>
+        </div>
+        <div id="country"></div>
+        <div id="city"></div>
+        <div id="weather-image"></div>
+        <div id="temperature"></div>
+        <div id="bottom-wrapper">
+          <div id="feels-like"></div>
+          <div id="humidity"></div>
+          <div id="rain"></div>
+          <div id="wind"></div>
+        </div>
+      </div>
+    </div>
   </body>
 </html>
