@@ -9,29 +9,49 @@
   </head>
   <body>
     <div id="container">
-      <div id="app-container">
+      <div id="app-container" class="box-style">
         <div id="top-wrapper">
-          <div id="search-wrapper">
+          <div id="search-wrapper" class="box-style">
             <form onsubmit="event.preventDefault()" action="" method="post">
               <input type="search" name="" id="search" />
-              <button id="submitbtn">submit</button>
+              <button id="submitbtn">search</button>
           </div>
 
-          <div id="grades">
+          <div id="grades" class="box-style">
           <button>ºC</button>  
           <div class="line"></div>
           <button>ºF</button>
           </div>
         </div>
-        <div id="country"></div>
-        <div id="city"></div>
-        <div id="weather-image"></div>
-        <div id="temperature"></div>
+        <div class="country-city country"  >
+          <p>Argentina</p>
+        </div>
+        <div class="country-city city">
+          <p>Buenos Aires</p>
+        </div>
+        <div id="weather-image">
+          <img src="https://placehold.co/200x200" alt="">
+        </div>
+        <div id="temperature">
+          <p>24ºC</p>
+        </div>
         <div id="bottom-wrapper">
-          <div id="feels-like"></div>
-          <div id="humidity"></div>
-          <div id="rain"></div>
-          <div id="wind"></div>
+          <div id="feels-like" class="box-style">
+            <p>Feels Like</p>
+            <p>bottom</p>
+          </div>
+          <div id="humidity" class="box-style">
+            <p>Humidity</p>
+            <p>bottom</p>
+          </div>
+          <div id="rain" class="box-style">
+            <p>Rain chances</p>
+            <p>bottom</p>
+          </div>
+          <div id="wind" class="box-style">
+            <p>Wind speed</p>
+            <p>bottom</p>
+          </div>
         </div>
       </div>
     </div>
