@@ -5,54 +5,69 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Weather App</title>
+    <style>
+      @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400&family=Work+Sans&display=swap');
+      </style>
+      
     <script src="main.js"></script>
   </head>
   <body>
     <div id="container">
       <div id="app-container" class="box-style">
+
+        <!-- TOP START -->
         <div id="top-wrapper">
-          <div id="search-wrapper" class="box-style">
+          <div id="search-wrapper" >
             <form onsubmit="event.preventDefault()" action="" method="post">
               <input type="search" name="" id="search" />
               <button id="submitbtn">search</button>
           </div>
-
-          <div id="grades" class="box-style">
+          <div id="grades">
           <button>ºC</button>  
           <div class="line"></div>
           <button>ºF</button>
+          <div class="line"></div>
+          <button class="light-mode">🌚</button>
+          <button class="dark-mode">🌞</button>
           </div>
+          <!-- TOP END -->
+
+          <!-- MIDDLE START -->
         </div>
         <div class="country-city country"  >
-          <p>Argentina</p>
+         <h1>Argentina</h1>
         </div>
         <div class="country-city city">
-          <p>Buenos Aires</p>
+          <h2>Buenos Aires</h2>
         </div>
         <div id="weather-image">
           <img src="https://placehold.co/200x200" alt="">
         </div>
         <div id="temperature">
-          <p>24ºC</p>
+          <h3>24ºC</h3>
         </div>
+          <!-- MIDDLE END -->
+          <!-- BOTTOM START -->
+
         <div id="bottom-wrapper">
-          <div id="feels-like" class="box-style">
+          <div class="box-style bottom-box">
             <p>Feels Like</p>
-            <p>bottom</p>
+            <p>24.5ºC</p>
           </div>
-          <div id="humidity" class="box-style">
+          <div class="box-style bottom-box">
             <p>Humidity</p>
-            <p>bottom</p>
+            <p>74%</p>
           </div>
-          <div id="rain" class="box-style">
-            <p>Rain chances</p>
-            <p>bottom</p>
+          <div class="box-style bottom-box">
+            <p>Rain chance</p>
+            <p>6%</p>
           </div>
-          <div id="wind" class="box-style">
+          <div class="box-style bottom-box">
             <p>Wind speed</p>
-            <p>bottom</p>
+            <p>8 km/h</p>
           </div>
         </div>
+          <!-- BOTTOM END -->
       </div>
     </div>
   </body>
