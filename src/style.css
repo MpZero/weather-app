@@ -11,22 +11,28 @@ html {
 
 :root {
   --clr--text: #141414;
+  --clr--text-alt: #f2f2f2;
+
   --clr--background: #ffffff;
   --clr--primary: #f2f2f2;
   --clr--secondary: #e5e5e5;
   --clr--accent: #0d0d0d;
-  --clr--text-alt: #f2f2f2;
+  --clr--shadow: #3f3f3f;
+
+  --body-background: #141414;
 }
 
-@media (color-scheme-dark: dark) {
-  :root {
-    --clr--background: #0f0f0f;
-    --clr--primary: #272727;
-    --clr--secondary: #3f3f3f;
-    --clr--accent: #f1f1f1;
-    --clr--text: #ffffff;
-    --clr--text-alt: #151515;
-  }
+.dark-mode {
+  --clr--text: #ffffff;
+  --clr--text-alt: #151515;
+
+  --clr--background: #0f0f0f;
+  --clr--primary: #272727;
+  --clr--secondary: #3f3f3f;
+  --clr--accent: #f1f1f1;
+  --clr--shadow: #3b3b3b;
+
+  --body-background: #272727;
 }
 
 body {
@@ -34,13 +40,13 @@ body {
 }
 
 button {
-  box-shadow: -1px 1px 1px 0px #8a8a8a;
+  box-shadow: -1px 4px 5px -1px var(--clr--shadow);
   background-color: var(--clr--primary);
-  border-radius: 6px;
-  border: none;
-  display: inline-block;
-  cursor: pointer;
   color: var(--clr--text);
+  display: inline-block;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
   font-size: 17px;
   padding: 6px 20px;
 }
@@ -54,26 +60,26 @@ button:active {
 button:focus {
   background-color: var(--clr--accent);
   color: var(--clr--text-alt);
+  box-shadow: -2px 4px 6px 0px var(--clr--shadow);
 }
 
 /* LIGHT/DARK THEME */
 
-.light-mode {
+#light-mode {
   display: none;
 }
 
-.dark-mode {
+#dark-mode {
   display: inline-block;
 }
 
 /* TOP PART START */
 
 .box-style {
-  border: 1px solid var(--clr-secondary);
   border-radius: 6px;
   background-color: var(--clr-primary);
-  box-shadow: -1px 1px 1px 0px #8a8a8a;
   padding: 12px;
+  box-shadow: -1px 4px 5px -1px var(--clr--shadow);
 }
 
 #container {
@@ -82,13 +88,13 @@ button:focus {
   align-items: center;
   height: 100%;
   width: 100vw;
-  background-color: var(--clr--text);
+  background-color: var(--body-background);
   padding: 60px;
 }
 
 #app-container {
   border-radius: 20px;
-  box-shadow: -1px 1px 1px 1px #8a8a8a;
+  box-shadow: -3px 4px 4px 4px var(--clr--shadow);
   background-color: var(--clr--background);
   max-width: 60vw;
   min-width: 620px;
@@ -112,9 +118,9 @@ button:focus {
   font-size: 14px;
   margin-right: 4px;
   padding: 4px;
-  box-shadow: 1px 1px 1px 0px #8a8a8a;
-  background-color: var(--clr-primary);
-  border-top: var(--clr--primary) 1px solid;
+  box-shadow: -1px 4px 5px -1px var(--clr--shadow);
+
+  background-color: var(--clr--secondary);
 }
 
 #grades {
@@ -131,6 +137,12 @@ button:focus {
 /* TOP PART END */
 
 /* MIDDLE START */
+
+h1,
+h2,
+h3 {
+  color: var(--clr--text);
+}
 
 .country-city {
   display: flex;
