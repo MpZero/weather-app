@@ -1,4 +1,5 @@
+import "./style.css";
 import "./darkmode.js";
 import "./fetch.js";
-import "./style.css";
+import "./domContent.js";
 console.log("hello world");

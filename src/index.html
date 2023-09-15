@@ -19,13 +19,13 @@
         <div id="top-wrapper">
           <div id="search-wrapper" >
             <form onsubmit="event.preventDefault()" action="" method="post">
-              <input type="search" name="" id="search" />
+              <input type="search" name="" id="search" placeholder="Input city or country name" />
               <button id="submitbtn">search</button>
           </div>
           <div id="grades">
-          <button>ºC</button>  
+          <button id="cel">ºC</button>  
           <div class="line"></div>
-          <button>ºF</button>
+          <button id="faren">ºF</button>
           <div class="line"></div>
           <button id="dark-mode">🌚</button>
           <button id="light-mode">🌞</button>
@@ -52,19 +52,19 @@
         <div id="bottom-wrapper">
           <div class="box-style bottom-box">
             <p>Feels Like</p>
-            <p>24.5ºC</p>
+            <p id="feels-like">24.5ºC</p>
           </div>
           <div class="box-style bottom-box">
             <p>Humidity</p>
-            <p>74%</p>
+            <p id="humidity">74%</p>
           </div>
           <div class="box-style bottom-box">
-            <p>Rain chance</p>
-            <p>6%</p>
+            <p>Precipitation</p>
+            <p id="precip">6%</p>
           </div>
           <div class="box-style bottom-box">
             <p>Wind speed</p>
-            <p>8 km/h</p>
+            <p id="wind-speed">8 km/h</p>
           </div>
         </div>
           <!-- BOTTOM END -->

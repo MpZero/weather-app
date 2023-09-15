@@ -119,7 +119,7 @@ button:focus {
   margin-right: 4px;
   padding: 4px;
   box-shadow: -1px 4px 5px -1px var(--clr--shadow);
-
+  color: var(--clr--text);
   background-color: var(--clr--secondary);
 }
 
@@ -150,7 +150,7 @@ h3 {
 }
 
 .country {
-  padding-left: 30%;
+  justify-content: center;
 }
 
 .city {
