@@ -1,6 +1,4 @@
 import "./style.css";
-console.log("darkmode");
-
 let darkMode = localStorage.getItem("darkMode");
 const darkModeBtn = document.querySelector("#dark-mode");
 const lightModeBtn = document.querySelector("#light-mode");

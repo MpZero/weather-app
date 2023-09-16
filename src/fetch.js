@@ -1,4 +1,3 @@
-console.log("fetch");
 const h1 = document.querySelector("h1");
 const h2 = document.querySelector("h2");
 const h3 = document.querySelector("h3");
@@ -12,8 +11,6 @@ const search = document.querySelector("#search").value;
 const celsiusBtn = document.querySelector("#cel");
 const farenBtn = document.querySelector("#faren");
 let unitSwitch = "enabled";
-
-console.log(unitSwitch);
 
 const btn = document.querySelector("#submitbtn");
 
@@ -35,8 +32,6 @@ farenBtn.addEventListener("click", () => {
 });
 
 async function getData(search) {
-  console.log(unitSwitch + " inside getdata function");
-
   try {
     //1. get the api data
     const response = await fetch(
@@ -77,15 +72,11 @@ function handleError(error) {
   h1.innerText = "Input correct city or country name";
   h2.innerText = " -- ";
   h3.innerText = " -- ";
-  img.src = "https://placehold.co/200x200";
+  img.src = "https://placehold.co/100x100";
   humidity.innerText = " -- ";
   feelsLike.innerText = " -- ";
   windSpeed.innerText = " -- ";
   precip.innerText = " -- ";
-}
-
-function storeddata(newdata) {
-  console.log(newdata + "hey");
 }
 
 //default search on page load
