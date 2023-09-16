@@ -157,7 +157,7 @@ h3 {
   justify-content: center;
 }
 
-#weather-image {
+#weather-wrapper {
   display: flex;
   justify-content: center;
   padding: 6px;

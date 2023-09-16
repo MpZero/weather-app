@@ -2,14 +2,15 @@ console.log("fetch");
 const h1 = document.querySelector("h1");
 const h2 = document.querySelector("h2");
 const h3 = document.querySelector("h3");
+const img = document.querySelector("#weather-img");
 const feelsLike = document.querySelector("#feels-like");
 const humidity = document.querySelector("#humidity");
 const precip = document.querySelector("#precip");
 const windSpeed = document.querySelector("#wind-speed");
 
 const search = document.querySelector("#search").value;
-const celsius = document.querySelector("#cel");
-const faren = document.querySelector("#faren");
+const celsiusBtn = document.querySelector("#cel");
+const farenBtn = document.querySelector("#faren");
 let unitSwitch = "enabled";
 
 console.log(unitSwitch);
@@ -21,13 +22,13 @@ btn.addEventListener("click", () => {
   getData(search);
 });
 
-celsius.addEventListener("click", () => {
+celsiusBtn.addEventListener("click", () => {
   const celSearch = document.querySelector("#search").value;
   unitSwitch = "enabled";
   getData(celSearch);
 });
 
-faren.addEventListener("click", () => {
+farenBtn.addEventListener("click", () => {
   const farenSearch = document.querySelector("#search").value;
   unitSwitch = "disabled";
   getData(farenSearch);
@@ -49,9 +50,10 @@ async function getData(search) {
     //2. process the data
     const data = await response.json();
 
-    //3. put data on page
+    //3. display data on the page
     h1.innerText = data.location.country;
     h2.innerText = data.location.name;
+    img.src = data.current.condition.icon;
     humidity.innerText = data.current.humidity + " %";
 
     if (unitSwitch === "enabled") {
@@ -75,6 +77,7 @@ function handleError(error) {
   h1.innerText = "Input correct city or country name";
   h2.innerText = " -- ";
   h3.innerText = " -- ";
+  img.src = "https://placehold.co/200x200";
   humidity.innerText = " -- ";
   feelsLike.innerText = " -- ";
   windSpeed.innerText = " -- ";
